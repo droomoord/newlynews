@@ -6,7 +6,7 @@ const Article = ({ article }) => {
   return (
     <>
       <Card style={{ maxWidth: "20rem" }}>
-        <a href={article.url} target="_blank">
+        <a href={article.url} target="_blank" rel="noreferrer">
           <Card.Img variant="top" src={article.urlToImage} />
         </a>
         {article.author ? (
@@ -19,7 +19,12 @@ const Article = ({ article }) => {
           <Card.Title>{article.title}</Card.Title>
           <Card.Text>{article.description}</Card.Text>
 
-          <Button variant="primary" href={article.url} target="_blank">
+          <Button
+            variant="primary"
+            href={article.url}
+            target="_blank"
+            rel="noreferrer"
+          >
             Go to article
           </Button>
         </Card.Body>

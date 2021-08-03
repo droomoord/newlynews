@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import axios from 'axios';
 import Article from "./article/Article";
 import styles from "../../styles/Articles.module.css";
-import FilterOptions from "../filter/filterOptions";
+// import FilterOptions from "../filter/filterOptions";
 import LazyLoad from 'react-lazyload';
 
 
@@ -42,7 +42,7 @@ const Articles = ({ apiData }) => {
 
   return (
     <div className={styles.container}>
-      <FilterOptions></FilterOptions>
+      {/* <FilterOptions></FilterOptions> */}
         <div className={styles.flex}>
         {apiData.articles.map((article, index, array) => {
           return <LazyLoad height={200}  key={index} >

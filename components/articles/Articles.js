@@ -35,7 +35,7 @@ const Articles = ({ apiData }) => {
     }
     page > 1 ? getPage() : null;
     
-  }, [page]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [page])
 
   
   

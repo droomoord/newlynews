@@ -18,8 +18,6 @@ const Articles = ({ apiData }) => {
 
   useEffect(() => {
     async function getPage() {
-      console.log(process.env.apiKey);
-      
       try {
         const category = router.query.category ? router.query.category : "general";
         console.log(`loading page ${page}`);
@@ -37,7 +35,7 @@ const Articles = ({ apiData }) => {
     }
     page > 1 ? getPage() : null;
     
-  }, [page])
+  }, [page]) // eslint-disable-line react-hooks/exhaustive-deps
 
   
   
